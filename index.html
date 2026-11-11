@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUse Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>ReUse Market</h2>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#sell">Sell Product</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <h2>Find Great Deals on Used Products</h2>
+        <p>Buy and sell second-hand products at affordable prices.</p>
+
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search for products...">
+            <button id="searchBtn">Search</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+
+        <h2>Available Products</h2>
+
+        <div class="filter-box">
+            <select id="categoryFilter">
+                <option value="All">All Categories</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Books">Books</option>
+                <option value="Vehicles">Vehicles</option>
+                <option value="Electronics">Electronics</option>
+            </select>
+        </div>
+
+        <div class="product-container" id="productContainer">
+
+            <!-- Product 1 -->
+            <div class="product-card" data-category="Furniture">
+                <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600"
+                     alt="Study Table">
+
+                <div class="product-info">
+                    <h3>Study Table</h3>
+                    <h4>₹2500</h4>
+                    <p>Category: Furniture</p>
+                    <p>Wooden study table in good condition.</p>
+                    <p>Seller: Priya</p>
+
+                    <button class="buy-btn"
+                            data-name="Study Table"
+                            data-price="2500">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="Books">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600"
+                     alt="Used Books">
+
+                <div class="product-info">
+                    <h3>Used Books</h3>
+                    <h4>₹500</h4>
+                    <p>Category: Books</p>
+                    <p>Collection of educational books.</p>
+                    <p>Seller: Kumar</p>
+
+                    <button class="buy-btn"
+                            data-name="Used Books"
+                            data-price="500">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="Vehicles">
+                <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600"
+                     alt="Used Bicycle">
+
+                <div class="product-info">
+                    <h3>Used Bicycle</h3>
+                    <h4>₹3500</h4>
+                    <p>Category: Vehicles</p>
+                    <p>Bicycle in good condition.</p>
+                    <p>Seller: Ravi</p>
+
+                    <button class="buy-btn"
+                            data-name="Used Bicycle"
+                            data-price="3500">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sell Product Section -->
+    <section class="sell-section" id="sell">
+
+        <h2>Sell Your Product</h2>
+
+        <form id="sellForm">
+
+            <label>Product Name:</label>
+            <input type="text" id="productName"
+                   placeholder="Enter product name" required>
+
+            <label>Price (₹):</label>
+            <input type="number" id="productPrice"
+                   placeholder="Enter price" min="1" required>
+
+            <label>Category:</label>
+            <select id="productCategory" required>
+                <option value="Electronics">Electronics</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Books">Books</option>
+                <option value="Vehicles">Vehicles</option>
+            </select>
+
+            <label>Description:</label>
+            <textarea id="productDescription"
+                      placeholder="Enter product description"
+                      required></textarea>
+
+            <label>Seller Name:</label>
+            <input type="text" id="sellerName"
+                   placeholder="Enter seller name" required>
+
+            <label>Image URL (Optional):</label>
+            <input type="url" id="imageUrl"
+                   placeholder="Enter image URL">
+
+            <button type="submit">Post Product</button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 ReUse Market | Buy and Sell Responsibly</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

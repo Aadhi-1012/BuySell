@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9f8;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background: #165b45;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar h2 {
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: #e7f2ed;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.hero h2 {
+    color: #27634e;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.hero p {
+    color: #777;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-box input {
+    width: 350px;
+    max-width: 70%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-box button {
+    background: #176448;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Products Section */
+.products-section {
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.products-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 23px;
+}
+
+.filter-box {
+    margin-bottom: 20px;
+}
+
+.filter-box select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Product Cards */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.product-info h4 {
+    color: #176448;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.buy-btn {
+    background: #176448;
+    color: white;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.buy-btn:hover,
+.search-box button:hover {
+    background: #104a36;
+}
+
+/* Sell Product Section */
+.sell-section {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+}
+
+.sell-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.sell-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sell-section label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-top: 12px;
+}
+
+.sell-section input,
+.sell-section select,
+.sell-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.sell-section textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.sell-section button {
+    background: #176448;
+    color: white;
+    border: none;
+    padding: 11px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sell-section button:hover {
+    background: #104a36;
+}
+
+/* Footer */
+footer {
+    background: #165b45;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .products-section {
+        padding: 25px 15px;
+    }
+
+    .sell-section {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+
+    .search-box input {
+        width: 70%;
+    }
+}
